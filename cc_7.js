@@ -43,3 +43,35 @@ const calculateLoyaltyDiscount = (amount, years) => {
 // Logging the customer's discount
 console.log(calculateLoyaltyDiscount(150, 7));
 console.log(calculateLoyaltyDiscount(350, 4));
+
+// Task 4: Parameters and Arguments
+const calculateShippingCost = (weight, location, expedited = false) => {
+    let baseCost;
+    let costPerLb;
+
+    // Determine the base cost and cost per lb based on location
+    if (location === "USA") {
+        baseCost = 5;
+        costPerLb = 0.5;
+    } else if (location === "Canada") {
+        baseCost = 10;
+        costPerLb = 0.7;
+    } else {
+        return "Invalid location"; // Handle invalid location
+    }
+
+    // Calculate the shipping cost
+    let shippingCost = baseCost + (weight * costPerLb);
+
+    // Add an additional $10 fee if expedited shipping is selected
+    if (expedited) {
+        shippingCost += 10;
+    }
+
+    // Return the shipping cost formatted as a string
+    return `Shipping Cost: $${shippingCost.toFixed(2)}`;
+};
+
+// Test cases with different data
+console.log(calculateShippingCost(8, "USA", true));
+console.log(calculateShippingCost(12, "Canada", false));
