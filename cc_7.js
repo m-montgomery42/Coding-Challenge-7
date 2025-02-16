@@ -88,3 +88,13 @@ const calculateLoanInterest = (principal, rate, years) => {
 // Logging the total loan interest
 console.log(calculateLoanInterest(2000, 0.04, 4));
 console.log(calculateLoanInterest(8000, 0.06, 6));
+
+// Task 6: Higher-Order Functions
+let transactions = [800, 1500, 700, 2500, 300, 1200, 1800];
+
+const filterHighValueTransactions = (transactions, filterFunction) => {
+    return transactions.filter(filterFunction);
+};
+
+// Logging high value transacton amounts
+console.log(filterHighValueTransactions(transactions, amount => amount > 1000));
