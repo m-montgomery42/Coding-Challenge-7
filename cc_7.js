@@ -136,6 +136,6 @@ function calculateGrowth(years, revenue) {
     calculateGrowth(years + 1, revenue * 1.05);
   }
   
-  // Test Data with different numbers
+  // Projected revenue ater growth each year
   calculateGrowth(6, 3000);
   calculateGrowth(3, 2000);
