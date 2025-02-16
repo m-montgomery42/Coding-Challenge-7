@@ -72,6 +72,19 @@ const calculateShippingCost = (weight, location, expedited = false) => {
     return `Shipping Cost: $${shippingCost.toFixed(2)}`;
 };
 
-// Test cases with different data
+// Logging the shipping cost
 console.log(calculateShippingCost(8, "USA", true));
 console.log(calculateShippingCost(12, "Canada", false));
+
+// Task 5: Returning Values
+const calculateLoanInterest = (principal, rate, years) => {
+    // Calculate the total interest
+    let interest = principal * rate * years;
+    
+    // Return the total interest formatted as a string
+    return `Total Interest: $${interest.toFixed(2)}`;
+};
+
+// Logging the total loan interest
+console.log(calculateLoanInterest(2000, 0.04, 4));
+console.log(calculateLoanInterest(8000, 0.06, 6));
